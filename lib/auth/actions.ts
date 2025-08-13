@@ -18,7 +18,7 @@ export async function signIn(prevState: any, formData: FormData) {
     return { error: "Email and password are required" }
   }
 
-  const cookieStore = cookies()
+  const cookieStore = await cookies()
   const supabase = createServerActionClient({ cookies: () => cookieStore })
 
   try {
@@ -54,7 +54,7 @@ export async function signUp(prevState: any, formData: FormData) {
     return { error: "Email, password, and username are required" }
   }
 
-  const cookieStore = cookies()
+  const cookieStore = await cookies()
   const supabase = createServerActionClient({ cookies: () => cookieStore })
 
   try {
@@ -81,7 +81,7 @@ export async function signUp(prevState: any, formData: FormData) {
 }
 
 export async function signOut() {
-  const cookieStore = cookies()
+  const cookieStore = await cookies()
   const supabase = createServerActionClient({ cookies: () => cookieStore })
 
   await supabase.auth.signOut()

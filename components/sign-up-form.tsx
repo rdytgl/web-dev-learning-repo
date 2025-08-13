@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Loader2, MessageCircle } from "lucide-react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
+import { useEffect } from "react"
 import { signUp } from "@/lib/auth/actions"
 
 function SubmitButton() {
@@ -27,7 +29,15 @@ function SubmitButton() {
 }
 
 export default function SignUpForm() {
+  const router = useRouter()
   const [state, formAction] = useActionState(signUp, null)
+
+  // Redirect to home if signup succeeded
+  useEffect(() => {
+    if (state?.success) {
+      router.push("/")  // automatically redirect to homepage
+    }
+  }, [state, router])
 
   return (
     <Card className="w-full max-w-md">
@@ -42,12 +52,6 @@ export default function SignUpForm() {
         <form action={formAction} className="space-y-4">
           {state?.error && (
             <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded text-sm">{state.error}</div>
-          )}
-
-          {state?.success && (
-            <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded text-sm">
-              {state.success}
-            </div>
           )}
 
           <div className="space-y-2">
