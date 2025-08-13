@@ -4,7 +4,7 @@ import { useActionState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Check, X } from "lucide-react"
-import { respondToFriendRequest } from "@/lib/actions"
+import { respondToFriendRequest } from "@/lib/auth/actions"
 
 interface FriendRequestCardProps {
   request: {

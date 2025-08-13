@@ -4,7 +4,7 @@ import { useActionState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { UserPlus } from "lucide-react"
-import { sendFriendRequest } from "@/lib/actions"
+import { sendFriendRequest } from "@/lib/auth/actions"
 
 interface UserCardProps {
   profile: {

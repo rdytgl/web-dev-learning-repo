@@ -9,7 +9,7 @@ import { Loader2, Send } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
-import { createPost } from "@/lib/actions"
+import { createPost } from "@/lib/auth/actions"
 
 function SubmitButton() {
   const { pending } = useFormStatus()

@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Loader2, MessageCircle } from "lucide-react"
 import Link from "next/link"
-import { signUp } from "@/lib/actions"
+import { signUp } from "@/lib/auth/actions"
 
 function SubmitButton() {
   const { pending } = useFormStatus()

@@ -6,7 +6,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button"
 import { Loader2 } from "lucide-react"
 import { useEffect } from "react"
-import { deletePost } from "@/lib/actions"
+import { deletePost } from "@/lib/auth/actions"
 
 function DeleteButton() {
   const { pending } = useFormStatus()

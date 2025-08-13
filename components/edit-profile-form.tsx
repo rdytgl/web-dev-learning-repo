@@ -10,7 +10,7 @@ import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import { Loader2 } from "lucide-react"
 import Link from "next/link"
-import { updateProfile } from "@/lib/actions"
+import { updateProfile } from "@/lib/auth/actions"
 
 function SubmitButton() {
   const { pending } = useFormStatus()

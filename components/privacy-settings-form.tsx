@@ -8,7 +8,7 @@ import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Loader2, Shield, Users, Eye } from "lucide-react"
-import { updatePrivacySettings } from "@/lib/actions"
+import { updatePrivacySettings } from "@/lib/auth/actions"
 
 function SubmitButton() {
   const { pending } = useFormStatus()

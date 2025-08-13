@@ -4,7 +4,7 @@ import { useActionState } from "react"
 import { useFormStatus } from "react-dom"
 import { Button } from "@/components/ui/button"
 import { Loader2 } from "lucide-react"
-import { unblockUser } from "@/lib/actions"
+import { unblockUser } from "@/lib/auth/actions"
 
 function UnblockButton() {
   const { pending } = useFormStatus()

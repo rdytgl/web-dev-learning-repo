@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import { Loader2 } from "lucide-react"
 import { useEffect } from "react"
-import { updatePost } from "@/lib/actions"
+import { updatePost } from "@/lib/auth/actions"
 
 function SubmitButton() {
   const { pending } = useFormStatus()

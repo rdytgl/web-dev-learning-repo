@@ -6,7 +6,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button"
 import { Loader2, UserX } from "lucide-react"
 import { useEffect } from "react"
-import { blockUser } from "@/lib/actions"
+import { blockUser } from "@/lib/auth/actions"
 
 function BlockButton() {
   const { pending } = useFormStatus()

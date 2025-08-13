@@ -9,7 +9,7 @@ import { Loader2, MessageCircle } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
-import { signIn } from "@/lib/actions"
+import { signIn } from "@/lib/auth/actions"
 
 function SubmitButton() {
   const { pending } = useFormStatus()
